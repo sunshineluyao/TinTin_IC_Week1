@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "tin_sunshine": {
+      "main": "src/tin_sunshine/main.mo",
+      "type": "motoko"
+    },
+    "tin_sunshine_assets": {
+      "dependencies": [
+        "tin_sunshine"
+      ],
+      "frontend": {
+        "entrypoint": "src/tin_sunshine_assets/src/index.html"
+      },
+      "source": [
+        "src/tin_sunshine_assets/assets",
+        "dist/tin_sunshine_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
